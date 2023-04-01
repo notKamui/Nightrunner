@@ -2,7 +2,7 @@ global:
   about: À propos
   sample: Test
 main:
-  title: Bienvenue Nightrunner
+  title: Bienvenue, Nightrunner
 about:
   title: À propos de Nightrunner
   summary: >-
