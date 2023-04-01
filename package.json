@@ -13,8 +13,25 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.2",
+    "@iconify-json/tabler": "^1.1.70",
+    "@intlify/unplugin-vue-i18n": "^0.10.0",
+    "@nuxt/image-edge": "1.0.0-28004510.a0dc8e8",
+    "@nuxtjs/color-mode": "^3.2.0",
+    "@nuxtjs/critters": "^0.4.0",
+    "@pinia/nuxt": "^0.4.7",
+    "@unocss/nuxt": "^0.50.6",
+    "@unocss/reset": "^0.50.6",
+    "@vue-macros/nuxt": "^1.2.7",
+    "@vue-macros/short-vmodel": "^1.2.3",
+    "@vue-macros/volar": "^0.9.4",
+    "@vueuse/core": "^9.13.0",
+    "@vueuse/nuxt": "^9.13.0",
+    "class-variance-authority": "^0.4.0",
     "eslint": "^8.37.0",
     "nuxt": "^3.3.2",
-    "taze": "^0.9.1"
+    "pinia": "^2.0.33",
+    "sass": "^1.60.0",
+    "taze": "^0.9.1",
+    "vue-i18n": "^9.2.2"
   }
 }
