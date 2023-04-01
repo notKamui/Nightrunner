@@ -39,7 +39,7 @@ It features the necessary tools to get you started immediately on your next proj
 
 3. **Replace all the occurrences of `Nightrunner` with your project's name.**
 
-    This includes both `NightRunner` and `nightrunner`.
+    This includes both `NightRunner` and `nightrunner`. Also, **DO NOT FORGET TO UPDATE THE [LICENSE](LICENSE) FILE**, otherwise, I'll be in legal possession of your project, which isn't good for you.
 
 3. **Start developing.**
 
