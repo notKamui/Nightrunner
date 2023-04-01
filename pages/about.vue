@@ -1,13 +1,13 @@
 <script lang="ts" setup>
+const { t } = useI18n()
+
 definePageMeta({
   layout: 'centercard',
 })
 
 useHead({
-  title: 'About • Nightrunner',
+  title: `${t('global.about')} • Nightrunner`,
 })
-
-const { t } = useI18n()
 </script>
 
 <template>

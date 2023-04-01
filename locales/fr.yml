@@ -1,5 +1,6 @@
 global:
   about: À propos
+  sample: Test
 main:
   title: Bienvenue Nightrunner
 about:

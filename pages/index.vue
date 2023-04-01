@@ -21,8 +21,13 @@ const { locale: currentLocale, t } = useI18n()
     <h1 class="title">
       {{ t('main.title') }}
     </h1>
-    <nuxt-link to="/about" class="btn">
-      {{ t('global.about') }}
-    </nuxt-link>
+    <span class="flex-center flex-row gap-5">
+      <nuxt-link to="/about" class="btn">
+        {{ t('global.about') }}
+      </nuxt-link>
+      <nuxt-link to="/sample" class="btn">
+        {{ t('global.sample') }}
+      </nuxt-link>
+    </span>
   </div>
 </template>
