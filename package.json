@@ -6,9 +6,14 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "nuxi": "nuxi",
+    "taze": "taze major -I"
   },
   "devDependencies": {
-    "nuxt": "^3.3.2"
+    "@antfu/eslint-config": "^0.38.2",
+    "eslint": "^8.37.0",
+    "nuxt": "^3.3.2",
+    "taze": "^0.9.1"
   }
 }
