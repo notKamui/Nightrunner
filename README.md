@@ -68,7 +68,7 @@ Nightrunner uses the following technologies:
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [ESLint](https://eslint.org/)
-- [UnoCSS](https://unocss.org/)
+- [UnoCSS](https://uno.antfu.me)
 - [Iconify](https://iconify.design/)
 - [Pinia](https://pinia.vuejs.org)
 - [Vue i18n](https://vue-i18n.intlify.dev/)
