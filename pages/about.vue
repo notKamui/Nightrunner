@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 definePageMeta({
   layout: 'centercard',
 })
@@ -6,23 +6,24 @@ definePageMeta({
 useHead({
   title: 'About • Nightrunner',
 })
+
+const { t } = useI18n()
 </script>
 
 <template>
   <div class="text-center mb-5">
     <h1 class="title">
-      About Nightrunner
+      {{ t('about.title') }}
     </h1>
   </div>
 
   <div>
     <p>
-      Nightrunner is a simple, fast, and ready to use starter template for Nuxt 3.
-      It features the necessary tools to get you started immediately on your next project.
+      {{ t('about.summary') }}
     </p>
 
     <p class="mt-5">
-      Nightrunner is built on top of the following technologies:
+      {{ t('about.features') }}
       <ul list>
         <li>Nuxt 3</li>
         <li>Vue 3</li>
@@ -35,7 +36,7 @@ useHead({
     </p>
 
     <p class="mt-5">
-      On top of that, it contains little helpers to help with localization, color schemes, and even a sensible configuration for ESLint and VSCode.
+      {{ t('about.config') }}
     </p>
   </div>
 </template>
