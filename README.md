@@ -50,6 +50,11 @@ It features the necessary tools to get you started immediately on your next proj
     pnpm dev
     ```
 
+    You may also want to check if there are any updates to the dependencies. Do so by running taze, but note that breakages may occur.
+    ```bash
+    pnpm taze
+    ```
+
 4. **Enjoy your new Nightrunner project!**
 
     Your site is now running at `http://localhost:3000`!
