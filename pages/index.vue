@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const { toggle } = useDark()
 const { locale: currentLocale, t } = useI18n()
 </script>
 
@@ -10,7 +11,13 @@ const { locale: currentLocale, t } = useI18n()
           {{ locale }}
         </option>
       </select>
+      <button class="icon-btn text-8" @click="toggle()">
+        <div i="tabler-sun dark:tabler-moon" />
+      </button>
     </div>
+    <p class="absolute top-10 left-10 text-8 font-text">
+      {{ $colorMode.value === 'dark' ? $t('theme.dark') : $t('theme.light') }}
+    </p>
     <h1 class="title">
       {{ t('main.title') }}
     </h1>
