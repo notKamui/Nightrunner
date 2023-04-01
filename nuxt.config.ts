@@ -3,6 +3,13 @@ import { fileURLToPath } from 'node:url'
 import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
 import { transformShortVmodel } from '@vue-macros/short-vmodel'
 
+function resolveLocalePath(extension: string): string {
+  return resolve(
+    dirname(fileURLToPath(import.meta.url)),
+    `./locales/*.${extension}`,
+  )
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -40,7 +47,11 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       VueI18nVitePlugin({
-        include: [resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.yml')],
+        include: [
+          resolveLocalePath('yml'),
+          resolveLocalePath('yaml'),
+          resolveLocalePath('json'),
+        ],
       }),
     ],
   },
