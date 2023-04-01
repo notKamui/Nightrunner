@@ -27,8 +27,11 @@ useHead({
       <ul list>
         <li>Nuxt 3</li>
         <li>Vue 3</li>
+        <li>Vite</li>
         <li>Typescript</li>
-        <li>Unocss</li>
+        <li>ESLint</li>
+        <li>UnoCSS</li>
+        <li>Iconify</li>
         <li>Pinia</li>
         <li>Vue-i18n</li>
         <li>Vue Macros</li>
