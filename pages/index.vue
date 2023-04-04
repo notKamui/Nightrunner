@@ -16,12 +16,7 @@ const { locale: currentLocale, t } = useI18n()
       </button>
     </div>
     <p class="absolute top-10 left-10 text-8 font-text">
-      <ClientOnly>
-        {{ isDark ? $t('theme.dark') : $t('theme.light') }}
-        <template #fallback>
-          Loading...
-        </template>
-      </ClientOnly>
+      {{ isDark ? t('theme.dark') : t('theme.light') }}
     </p>
     <h1 class="title">
       {{ t('main.title') }}
