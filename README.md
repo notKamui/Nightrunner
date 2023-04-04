@@ -1,6 +1,6 @@
 # 🌘 Nightrunner
 
-Nightrunner is a simple, fast, and ready to use starter template for Nuxt 3.
+Nightrunner is a simple, fast, and ready to use starter template for Nuxt 3 in SPA mode.
 It features the necessary tools to get you started immediately on your next project.
 
 ## Summary
@@ -141,16 +141,6 @@ pnpm dev
 ```
 
 ### 💪 Building for production
-
-When in SSR mode:
-
-```bash	
-pnpm build
-```
-
-The production output will be generated in the `.output/` directory.
-
-When in static mode:
 
 ```bash
 pnpm generate
