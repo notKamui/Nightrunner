@@ -162,6 +162,6 @@ The static output will be generated in the `.output/public/` directory.
 
 ```bash
 pnpm nuxi add <template> <name> # Add a new page, component, store, composable, etc.
-pnpm taze # Update dependencies /!\ Do that only in a clean and specific branch /!\
+pnpm taze # Update dependencies
 pnpm lint --fix # Lint the code and fix errors, following the ESLint configuration
 ```
