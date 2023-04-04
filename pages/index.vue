@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { toggle } = useDark()
+const { isDark, toggle } = useDark()
 const { locale: currentLocale, t } = useI18n()
 </script>
 
@@ -16,7 +16,12 @@ const { locale: currentLocale, t } = useI18n()
       </button>
     </div>
     <p class="absolute top-10 left-10 text-8 font-text">
-      {{ $colorMode.value === 'dark' ? $t('theme.dark') : $t('theme.light') }}
+      <ClientOnly>
+        {{ isDark ? $t('theme.dark') : $t('theme.light') }}
+        <template #fallback>
+          Loading...
+        </template>
+      </ClientOnly>
     </p>
     <h1 class="title">
       {{ t('main.title') }}
