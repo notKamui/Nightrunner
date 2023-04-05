@@ -33,7 +33,7 @@ useHead({
         <li>UnoCSS</li>
         <li>Iconify</li>
         <li>Pinia</li>
-        <li>Vue-i18n</li>
+        <li>Nuxt i18n</li>
         <li>Vue Macros</li>
       </ul>
     </p>
