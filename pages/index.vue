@@ -1,16 +1,12 @@
 <script lang="ts" setup>
 const { isDark, toggle } = useDark()
-const { locale: currentLocale, t } = useI18n()
+const { t } = useCustomI18n()
 </script>
 
 <template>
   <div class="flex-center h-screen gap-10">
     <div class="absolute top-10 right-10 flex flex-row gap-2">
-      <select v-model="currentLocale" class="px-2 py-1 rounded-lg">
-        <option v-for="locale of availableLocales" :key="locale" :value="locale">
-          {{ locale }}
-        </option>
-      </select>
+      <LocaleSwitch />
       <button class="icon-btn text-8" @click="toggle()">
         <div i="tabler-sun dark:tabler-moon" />
       </button>

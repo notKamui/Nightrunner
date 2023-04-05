@@ -1,14 +1,11 @@
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
+import fs from 'node:fs'
 import { transformShortVmodel } from '@vue-macros/short-vmodel'
 
-function resolveLocalePath(extension: string): string {
-  return resolve(
-    dirname(fileURLToPath(import.meta.url)),
-    `./locales/*.${extension}`,
-  )
-}
+const locales = fs.readdirSync('locales')
+  .map(file => ({
+    code: file.replace(/\.(yml|yaml|json)$/, ''),
+    file,
+  }))
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -22,7 +19,7 @@ export default defineNuxtConfig({
   components: [{ path: '~/components', pathPrefix: false }],
 
   // uncomment to disable SSR. This will basically make the app a SPA, like a normal Vue app, but with all the Nuxt goodies
-  ssr: false,
+  // ssr: false,
 
   // global CSS files
   css: [
@@ -31,6 +28,7 @@ export default defineNuxtConfig({
 
   // plugin configurations
   modules: [
+    '@nuxtjs/i18n',
     '@vueuse/nuxt',
     '@vue-macros/nuxt',
     '@unocss/nuxt',
@@ -44,16 +42,10 @@ export default defineNuxtConfig({
       nodeTransforms: [transformShortVmodel({ prefix: '::' })],
     },
   },
-  vite: {
-    plugins: [
-      VueI18nVitePlugin({
-        include: [
-          resolveLocalePath('yml'),
-          resolveLocalePath('yaml'),
-          resolveLocalePath('json'),
-        ],
-      }),
-    ],
+  i18n: {
+    langDir: 'locales',
+    defaultLocale: 'en',
+    locales,
   },
   macros: {
     exportProps: true,
