@@ -72,7 +72,7 @@ Nightrunner uses the following technologies:
 - [UnoCSS](https://uno.antfu.me)
 - [Iconify](https://iconify.design/)
 - [Pinia](https://pinia.vuejs.org)
-- [Vue i18n](https://vue-i18n.intlify.dev/)
+- [Nuxt i18n](https://v8.i18n.nuxtjs.org/)
 - [Vue Macros](https://vue-macros.sxzz.moe)
 
 For more information on each of these, please refer to their respective documentation.
@@ -97,14 +97,14 @@ Pinia stores are stored in the `stores` directory, and are automatically registe
 
 ### 🌐 Localization
 
-Nightrunner uses Vue i18n for localization. The default language is the system's language, and English is the fallback, but it can be changed. You can add as many locales as you want by creating a file in the `locales` directory, following the same scheme as the already provided files.
+Nightrunner uses Nuxt i18n for localization. The default language is the system's language, and English is the fallback, but it can be changed. You can add as many locales as you want by creating a file in the `locales` directory, following the same scheme as the already provided files.
 
 To interact with it, there are several files and composables available to you:
 
 - `utils/locales.ts` is ran every time Nuxt reloads the project, and exports the list of locales available in the project. As you can see in it, locale files can be either `.yml`, `.yaml`, or `.json` files.
-- `plugins/i18n.ts` is the Nuxt plugin that configures and loads Vue i18n with the available locales.
-- `composables/useLocale.ts` is a composable that provides ref to the current preferred locale. This is where one can change the fallback locale (or the default locale to that matter, but it is not recommended and is more complicated). The current preferred locale is stored and persisted in locale storage. When the ref is updated, the locale storage is updated as well.
-- `composables/useI18n.ts` is a composable that provides both the current locale, as well as the translation function. It is a wrapper around the `useLocale` and `useI18n` composable from Vue i18n. See [the documentation](https://vue-i18n.intlify.dev/guide/) for more information.
+- `nuxt.config.ts` is where the actual configuration of the plugin resides. This is where you can change the default locale, the fallback locale, and the strategy for loading the locales.
+- `composables/useLocale.ts` is a composable that provides ref to the current preferred locale. This is where one can change the fallback locale (or the default locale to that matter, but it is not recommended and is more complicated). The current preferred locale is stored and persisted in local storage. When the ref is updated, the local storage is updated as well.
+- `composables/useCustomI18n.ts` is a wrapper around the `useLocale` and `useI18n` composable from Nuxt i18n. See [the documentation](https://v8.i18n.nuxtjs.org/) for more information. In particular, what it does is synchronize the preferred locale in the local storage with the locale used by Nuxt i18n and the current localized route.
 
 ### 🖌️ Theme: Light and Dark
 
