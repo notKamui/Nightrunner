@@ -2,7 +2,7 @@
 import type { RawLocation, RouteLocation } from '@intlify/vue-router-bridge'
 
 defineProps<{
-  to: RawLocation | RouteLocation
+  to: string | RawLocation | RouteLocation
 }>()
 
 const { locale } = useCustomI18n()

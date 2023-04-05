@@ -15,7 +15,12 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
   },
-  imports: { dirs: ['stores'] }, // add folders here to auto-import them in your application
+  imports: { // add folders here to auto-import them in your application
+    dirs: [
+      'stores',
+      'composables/**',
+    ],
+  },
   components: [{ path: '~/components', pathPrefix: false }],
 
   // uncomment to disable SSR. This will basically make the app a SPA, like a normal Vue app, but with all the Nuxt goodies
