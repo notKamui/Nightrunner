@@ -1,3 +1,5 @@
+import { LocalizedLink } from '~/.nuxt/components';
+
 <template>
   <div>
     <div class="flex items-center justify-center w-screen h-screen">
@@ -6,9 +8,9 @@
       </div>
     </div>
     <div class="absolute bottom-10 right-10">
-      <nuxt-link to="/" class="icon-btn text-4xl">
+      <LocalizedLink to="/" class="icon-btn text-4xl">
         <div i="tabler-arrow-left" />
-      </nuxt-link>
+      </LocalizedLink>
     </div>
   </div>
 </template>
