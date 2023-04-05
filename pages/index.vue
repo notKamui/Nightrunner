@@ -1,29 +1,17 @@
 <script lang="ts" setup>
-const { isDark, toggle } = useDark()
 const { t } = useCustomI18n()
 </script>
 
 <template>
-  <div class="flex-center h-screen gap-10">
-    <div class="absolute top-10 right-10 flex flex-row gap-2">
-      <LocaleSwitch />
-      <button class="icon-btn text-8" @click="toggle()">
-        <div i="tabler-sun dark:tabler-moon" />
-      </button>
-    </div>
-    <p class="absolute top-10 left-10 text-8 font-text">
-      {{ isDark ? t('theme.dark') : t('theme.light') }}
-    </p>
-    <h1 class="title">
-      {{ t('main.title') }}
-    </h1>
-    <span class="flex-center flex-row gap-5">
-      <LocalizedLink to="/about" class="btn">
-        {{ t('global.about') }}
-      </LocalizedLink>
-      <LocalizedLink to="/sample" class="btn">
-        {{ t('global.sample') }}
-      </LocalizedLink>
-    </span>
-  </div>
+  <h1 class="title">
+    {{ t('main.title') }}
+  </h1>
+  <span class="flex-center flex-row gap-5">
+    <LocalizedLink to="/about" class="btn">
+      {{ t('global.about') }}
+    </LocalizedLink>
+    <LocalizedLink to="/sample" class="btn">
+      {{ t('global.sample') }}
+    </LocalizedLink>
+  </span>
 </template>
