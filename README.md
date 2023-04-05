@@ -18,6 +18,7 @@ It features the necessary tools to get you started immediately on your next proj
     - [🏃‍♂️ Running in development mode](#️-running-in-development-mode)
     - [💪 Building for production](#-building-for-production)
     - [📝 Other scripts](#-other-scripts)
+  - [Todo](#todo)
 
 
 ## 🚀 Quick start
@@ -165,3 +166,8 @@ pnpm nuxi add <template> <name> # Add a new page, component, store, composable, 
 pnpm taze # Update dependencies
 pnpm lint --fix # Lint the code and fix errors, following the ESLint configuration
 ```
+
+## TODO
+
+- Add documentation for the components and composables
+- Add configuration for OAuth
