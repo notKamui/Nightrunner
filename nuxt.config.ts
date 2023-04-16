@@ -39,7 +39,6 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@nuxtjs/critters',
     '@nuxtjs/color-mode',
-    '@nuxt/image-edge',
     '@pinia/nuxt',
   ],
   vue: {
