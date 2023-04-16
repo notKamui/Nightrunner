@@ -28,7 +28,8 @@ export default defineNuxtConfig({
 
   // global CSS files
   css: [
-    '@unocss/reset/antfu.css',
+    '@unocss/reset/tailwind.css',
+    '@/assets/css/reset.css',
   ],
 
   // plugin configurations

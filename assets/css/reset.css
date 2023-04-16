@@ -1,0 +1,17 @@
+/* Reset */
+html {
+  scrollbar-gutter: stable;
+}
+.dark {
+  color-scheme: dark;
+}
+.dark ::-moz-selection  {
+  background: #444;
+}
+.dark ::selection {
+  background: #444;
+}
+div {
+  display: flex;
+  flex-direction: column;
+}
