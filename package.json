@@ -16,7 +16,7 @@
     "@iconify-json/tabler": "^1.1.74",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/critters": "^0.4.0",
-    "@nuxtjs/i18n": "8.0.0-beta.10",
+    "@nuxtjs/i18n": "8.0.0-beta.11",
     "@pinia/nuxt": "^0.4.9",
     "@unocss/nuxt": "^0.51.8",
     "@unocss/reset": "^0.51.8",
