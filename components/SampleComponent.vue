@@ -5,7 +5,7 @@ const { increment, reset } = store
 </script>
 
 <template>
-  <div class="flex-center gap-10">
+  <div class="flex-center flex-col gap-10">
     <h1 class="title">
       Counter: {{ count }}
     </h1>

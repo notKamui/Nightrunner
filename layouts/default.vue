@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen">
-    <Header />
-    <div class="h-full flex-center gap-5">
+    <NHeader />
+    <div class="h-full flex-center flex-col gap-5">
       <slot />
     </div>
   </div>
