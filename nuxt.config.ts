@@ -55,6 +55,7 @@ export default defineNuxtConfig({
   macros: {
     exportProps: true,
     reactivityTransform: true,
+    betterDefine: true,
   },
   colorMode: {
     preference: 'system',

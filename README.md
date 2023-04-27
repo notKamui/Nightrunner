@@ -103,12 +103,16 @@ To interact with it, there are several files and composables available to you:
 
 - `utils/locales.ts` is ran every time Nuxt reloads the project, and exports the list of locales available in the project. As you can see in it, locale files can be either `.yml`, `.yaml`, or `.json` files.
 - `nuxt.config.ts` is where the actual configuration of the plugin resides. This is where you can change the default locale, the fallback locale, and the strategy for loading the locales.
-- `composables/useLocale.ts` is a composable that provides ref to the current preferred locale. This is where one can change the fallback locale (or the default locale to that matter, but it is not recommended and is more complicated). The current preferred locale is stored and persisted in local storage. When the ref is updated, the local storage is updated as well.
-- `composables/useCustomI18n.ts` is a wrapper around the `useLocale` and `useI18n` composable from Nuxt i18n. See [the documentation](https://v8.i18n.nuxtjs.org/) for more information. In particular, what it does is synchronize the preferred locale in the local storage with the locale used by Nuxt i18n and the current localized route.
+- `useLocale` is a composable that provides ref to the current preferred locale. This is where one can change the fallback locale (or the default locale to that matter, but it is not recommended and is more complicated). The current preferred locale is stored and persisted in local storage. When the ref is updated, the local storage is updated as well.
+- `useCustomI18n` is a wrapper around the `useLocale` and `useI18n` composable from Nuxt i18n. See the [documentation](https://v8.i18n.nuxtjs.org/) for more information. In particular, what it does is synchronize the preferred locale in the local storage with the locale used by Nuxt i18n and the current localized route.
+- `localizedNavigateTo` is a wrapper around the `navigateTo` function from Nuxt. It allows you to navigate through the app, keeping the current locale. 
+- `LocalizedLink` is wrapper around `NuxtLink` which is the counterpart to `localizedNavigateTo`.
+
+For more information on Nuxt i18n, please refer to the [documentation](https://v8.i18n.nuxtjs.org/).
 
 ### 🖌️ Theme: Light and Dark
 
-Nightrunner provides a basic theme system, with a light and a dark theme. The theme can be interacted with thanks to the `composables/useDark.ts` composable, which provides a ref to the current theme, a boolean ref to know if the current theme is dark, the user's preferred theme, and a function to toggle the theme. The current theme is stored and persisted in locale storage. When the ref is updated, the locale storage is updated as well.
+Nightrunner provides a basic theme system, with a light and a dark theme. The theme can be interacted with thanks to the `useDark` composable, which provides a ref to the current theme, a boolean ref to know if the current theme is dark, the user's preferred theme, and a function to toggle the theme. The current theme is stored and persisted in locale storage. When the ref is updated, the locale storage is updated as well.
 
 Along with the locale storage, the theme is also stored as a class on the `html` element. This allows you to use CSS variables to style your app, and have the theme change automatically when the user changes it. In particular, this works well with UnoCSS (or Tailwind-like CSS frameworks) with the `dark:` pseudo-class prefix.
 
