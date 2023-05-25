@@ -22,6 +22,24 @@ export default defineNuxtConfig({
     ],
   },
   components: [{ path: '~/components', pathPrefix: false }],
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        moduleResolution: 'bundler',
+      },
+    },
+  },
+  vite: {
+    vue: {
+      script: {
+        defineModel: true,
+        propsDestructure: true,
+      },
+    },
+  },
+  experimental: {
+    typedPages: true,
+  },
 
   // uncomment to disable SSR. This will basically make the app a SPA, like a normal Vue app, but with all the Nuxt goodies
   // ssr: false,
@@ -67,7 +85,6 @@ export default defineNuxtConfig({
   pinia: {
     autoImports: [
       'defineStore',
-      ['defineStore', 'definePiniaStore'],
       'storeToRefs',
     ],
   },
