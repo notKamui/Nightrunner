@@ -1,13 +1,13 @@
 export const useCounterStore = defineStore('counter', () => {
-  let count = $ref(0)
+  const count = ref(0)
 
   function increment() {
-    count++
+    count.value++
   }
 
   function reset() {
-    count = 0
+    count.value = 0
   }
 
-  return $$({ count, increment, reset })
+  return { count, increment, reset }
 })

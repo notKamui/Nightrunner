@@ -11,9 +11,9 @@ export default function useDark() {
       colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
   }
 
-  const value = $computed(() => colorMode.value)
-  const isDark = $computed(() => value === 'dark')
-  const preference = $computed(() => colorMode.preference)
+  const value = computed(() => colorMode.value)
+  const isDark = computed(() => value.value === 'dark')
+  const preference = computed(() => colorMode.preference)
 
-  return $$({ toggle, value, isDark, preference })
+  return { toggle, value, isDark, preference }
 }
