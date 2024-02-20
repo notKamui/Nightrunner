@@ -20,7 +20,6 @@ It features the necessary tools to get you started immediately on your next proj
     - [📝 Other scripts](#-other-scripts)
   - [Todo](#todo)
 
-
 ## 🚀 Quick start
 
 1. **Get pnpm.**
@@ -105,7 +104,7 @@ To interact with it, there are several files and composables available to you:
 - `nuxt.config.ts` is where the actual configuration of the plugin resides. This is where you can change the default locale, the fallback locale, and the strategy for loading the locales.
 - `useLocale` is a composable that provides ref to the current preferred locale. This is where one can change the fallback locale (or the default locale to that matter, but it is not recommended and is more complicated). The current preferred locale is stored and persisted in local storage. When the ref is updated, the local storage is updated as well.
 - `useCustomI18n` is a wrapper around the `useLocale` and `useI18n` composable from Nuxt i18n. See the [documentation](https://v8.i18n.nuxtjs.org/) for more information. In particular, what it does is synchronize the preferred locale in the local storage with the locale used by Nuxt i18n and the current localized route.
-- `localizedNavigateTo` is a wrapper around the `navigateTo` function from Nuxt. It allows you to navigate through the app, keeping the current locale. 
+- `localizedNavigateTo` is a wrapper around the `navigateTo` function from Nuxt. It allows you to navigate through the app, keeping the current locale.
 - `LocalizedLink` is wrapper around `NuxtLink` which is the counterpart to `localizedNavigateTo`.
 
 For more information on Nuxt i18n, please refer to the [documentation](https://v8.i18n.nuxtjs.org/).
@@ -120,7 +119,7 @@ Along with the locale storage, the theme is also stored as a class on the `html`
 
 ### ⚙️ Setup
 
-Prefer VSCode to work using this template. You can use whatever IDE you want, but you will have to configure it yourself, 
+Prefer VSCode to work using this template. You can use whatever IDE you want, but you will have to configure it yourself,
 and won't be able to have access to the recommended extensions.
 
 When opening VSCode, you will be prompted to install recommended extensions. Do so and reload.

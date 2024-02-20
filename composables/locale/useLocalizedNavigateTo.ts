@@ -8,8 +8,9 @@ export default function useLocalizedNavigateTo() {
   return function localizedNavigateTo(path: NavigateToPath, options?: NavigateToOptions) {
     const localeRoute = useLocaleRoute()
     const route = localeRoute(path as string | RouteLocationPathRaw | RouteLocationNamedRaw)
-    if (route)
+    if (route) {
       return navigateTo(route.fullPath, options)
+    }
   }
 }
 

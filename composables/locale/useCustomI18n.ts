@@ -8,9 +8,7 @@ export default function useCustomI18n(options?: UseI18nOptions) {
   syncRef(i18n.locale, locale)
 
   watch(locale, (value, previous) => {
-    if (value === previous)
-      return
-
+    if (value === previous) return
     const path = switchLocalePath(value)
     router.replace(path)
   })

@@ -2,13 +2,13 @@ export default function useDark() {
   const colorMode = useColorMode()
 
   function toggle(dark?: boolean): void {
-    if (colorMode.unknown)
-      return
+    if (colorMode.unknown) return
 
-    if (dark !== undefined)
+    if (dark !== undefined) {
       colorMode.preference = dark ? 'dark' : 'light'
-    else
+    } else {
       colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+    }
   }
 
   const value = computed(() => colorMode.value)
