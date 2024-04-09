@@ -72,7 +72,6 @@ Nightrunner uses the following technologies:
 - [Iconify](https://iconify.design/)
 - [Pinia](https://pinia.vuejs.org)
 - [Nuxt i18n](https://v8.i18n.nuxtjs.org/)
-- [Vue Macros](https://vue-macros.sxzz.moe)
 
 For more information on each of these, please refer to their respective documentation.
 
@@ -105,7 +104,7 @@ To interact with it, there are several files and composables available to you:
 - `useLocale` is a composable that provides ref to the current preferred locale. This is where one can change the fallback locale (or the default locale to that matter, but it is not recommended and is more complicated). The current preferred locale is stored and persisted in local storage. When the ref is updated, the local storage is updated as well.
 - `useCustomI18n` is a wrapper around the `useLocale` and `useI18n` composable from Nuxt i18n. See the [documentation](https://v8.i18n.nuxtjs.org/) for more information. In particular, what it does is synchronize the preferred locale in the local storage with the locale used by Nuxt i18n and the current localized route.
 - `localizedNavigateTo` is a wrapper around the `navigateTo` function from Nuxt. It allows you to navigate through the app, keeping the current locale.
-- `LocalizedLink` is wrapper around `NuxtLink` which is the counterpart to `localizedNavigateTo`.
+- `NuxtLinkLocale` is wrapper around `NuxtLink` which is the counterpart to `localizedNavigateTo`.
 
 For more information on Nuxt i18n, please refer to the [documentation](https://v8.i18n.nuxtjs.org/).
 

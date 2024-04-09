@@ -7,11 +7,11 @@ const { t } = useCustomI18n()
     {{ t('main.title') }}
   </h1>
   <span class="flex-center flex-row gap-5">
-    <LocalizedLink to="/about" class="btn">
+    <NuxtLinkLocale to="/about" class="btn">
       {{ t('global.about') }}
-    </LocalizedLink>
-    <LocalizedLink to="/sample" class="btn">
+    </NuxtLinkLocale>
+    <NuxtLinkLocale to="/sample" class="btn">
       {{ t('global.sample') }}
-    </LocalizedLink>
+    </NuxtLinkLocale>
   </span>
 </template>

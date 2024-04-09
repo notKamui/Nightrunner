@@ -34,7 +34,6 @@ useHead({
         <li>Iconify</li>
         <li>Pinia</li>
         <li>Nuxt i18n</li>
-        <li>Vue Macros</li>
       </ul>
     </p>
 

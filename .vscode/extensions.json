@@ -10,7 +10,6 @@
     "soulcode.vscode-unwanted-extensions"
   ],
   "unwantedRecommendations": [
-    "vscode.typescript-language-features",
     "octref.vetur",
     "vue.vscode-typescript-vue-plugin"
   ]

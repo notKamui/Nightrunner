@@ -1,5 +1,4 @@
 import fs from 'node:fs'
-import { transformShortVmodel } from '@vue-macros/short-vmodel'
 
 const locales = fs.readdirSync('locales')
   .map(file => ({
@@ -54,26 +53,15 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
-    '@vue-macros/nuxt',
     '@unocss/nuxt',
     '@nuxtjs/critters',
     '@nuxtjs/color-mode',
     '@pinia/nuxt',
   ],
-  vue: {
-    compilerOptions: {
-      nodeTransforms: [transformShortVmodel({ prefix: '::' })],
-    },
-  },
   i18n: {
     langDir: 'locales',
     defaultLocale: 'en',
     locales,
-  },
-  macros: {
-    exportProps: true,
-    reactivityTransform: true,
-    betterDefine: true,
   },
   colorMode: {
     preference: 'system',
@@ -81,11 +69,5 @@ export default defineNuxtConfig({
     classPrefix: '',
     classSuffix: '',
     storageKey: 'color-scheme',
-  },
-  pinia: {
-    autoImports: [
-      'defineStore',
-      'storeToRefs',
-    ],
   },
 })

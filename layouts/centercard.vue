@@ -8,8 +8,8 @@
     </div>
   </div>
   <div class="absolute bottom-10 right-10">
-    <LocalizedLink to="/" class="icon-btn text-4xl">
+    <NuxtLinkLocale to="/" class="icon-btn text-4xl">
       <div i="tabler-arrow-left" />
-    </LocalizedLink>
+    </NuxtLinkLocale>
   </div>
 </template>
